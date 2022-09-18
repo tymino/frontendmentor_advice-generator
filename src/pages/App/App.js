@@ -1,10 +1,11 @@
-
+import { Attribution, Card } from '../../components';
 const App = () => {
   return (
     <div className="app">
-      Learn React
+      <Card />
+      <Attribution />
     </div>
   );
-}
+};
 
 export default App;
