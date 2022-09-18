@@ -1,4 +1,3 @@
-// import './Attribution.sass';
 import styled from 'styled-components';
 
 const AttrContainer = styled.div`
@@ -14,7 +13,6 @@ const Attribution = () => {
     <AttrContainer>
       Challenge by{' '}
       <AttrLink
-        className="attribution__link"
         href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db"
         target="_blank"
         rel="noreferrer"
@@ -23,7 +21,6 @@ const Attribution = () => {
       </AttrLink>
       . Coded by{' '}
       <AttrLink
-        className="attribution__link"
         href="https://github.com/tymino"
         target="_blank"
         rel="noreferrer"
