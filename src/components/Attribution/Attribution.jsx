@@ -1,28 +1,37 @@
-import './Attribution.sass';
+// import './Attribution.sass';
+import styled from 'styled-components';
+
+const AttrContainer = styled.div`
+  font-size: 11px;
+  text-align: center;
+`;
+const AttrLink = styled.a`
+  color: hsl(228, 45%, 44%);
+`;
 
 const Attribution = () => {
   return (
-    <div className="attribution">
+    <AttrContainer>
       Challenge by{' '}
-      <a
+      <AttrLink
         className="attribution__link"
         href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db"
         target="_blank"
         rel="noreferrer"
       >
         Frontend Mentor
-      </a>
+      </AttrLink>
       . Coded by{' '}
-      <a
+      <AttrLink
         className="attribution__link"
         href="https://github.com/tymino"
         target="_blank"
         rel="noreferrer"
       >
         tymino
-      </a>
+      </AttrLink>
       .
-    </div>
+    </AttrContainer>
   );
 };
 
