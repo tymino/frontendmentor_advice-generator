@@ -1,7 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import styled from 'styled-components';
 import axios from 'axios';
+import { Button } from '../';
+
+import { ReactComponent as SvgDividerMobile } from './icons/pattern-divider-mobile.svg';
+import { ReactComponent as SvgDividerDesktop } from './icons/pattern-divider-desktop.svg';
+
+const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid green;
+`;
+
+const CardTitle = styled.h1``;
+
+const CardBody = styled.p``;
+
+const CardLine = styled.div`
+  border: 1px solid black;
+`;
+
+const CardButtonWrapper = styled.h1``;
 
 const Card = () => {
+  const cardContainerRef = useRef(null);
   const [{ id, advice }, setAdvice] = useState({});
 
   const updateAdvice = async () => {
@@ -18,18 +42,16 @@ const Card = () => {
   }, []);
 
   return (
-    <div className="card">
-      <div className="card__id">{id}</div>
-      <div className="card__advice">{advice}</div>
-      <button className='card__button' onClick={updateAdvice}>
-        <svg className='card__svg' width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
-            fill="#202733"
-          />
-        </svg>
-      </button>
-    </div>
+    <CardContainer ref={cardContainerRef}>
+      <CardTitle>{id}</CardTitle>
+      <CardBody>{advice}</CardBody>
+      <CardLine>
+        <SvgDividerMobile />
+      </CardLine>
+      <CardButtonWrapper>
+        <Button />
+      </CardButtonWrapper>
+    </CardContainer>
   );
 };
 

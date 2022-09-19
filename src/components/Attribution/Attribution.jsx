@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const AttrContainer = styled.div`
+  position: absolute;
+  top: 2px;
+  left: 6px;
   font-size: 11px;
   text-align: center;
 `;
