@@ -1,10 +1,7 @@
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import { Button } from '../';
-
-import { ReactComponent as SvgDividerMobile } from './icons/pattern-divider-mobile.svg';
-import { ReactComponent as SvgDividerDesktop } from './icons/pattern-divider-desktop.svg';
+import { Button, Line } from '../';
 
 const CardContainer = styled.div`
   display: flex;
@@ -18,14 +15,15 @@ const CardTitle = styled.h1``;
 
 const CardBody = styled.p``;
 
-const CardLine = styled.div`
-  border: 1px solid black;
+const CardButtonWrapper = styled.div`
+  transform: translateY(50%);
 `;
 
-const CardButtonWrapper = styled.h1``;
+// svg width:
+// d - 444
+// m - 295
 
 const Card = () => {
-  const cardContainerRef = useRef(null);
   const [{ id, advice }, setAdvice] = useState({});
 
   const updateAdvice = async () => {
@@ -42,14 +40,12 @@ const Card = () => {
   }, []);
 
   return (
-    <CardContainer ref={cardContainerRef}>
-      <CardTitle>{id}</CardTitle>
+    <CardContainer>
+      <CardTitle>{`advice #${id}`}</CardTitle>
       <CardBody>{advice}</CardBody>
-      <CardLine>
-        <SvgDividerMobile />
-      </CardLine>
+      <Line minWidth={480} />
       <CardButtonWrapper>
-        <Button />
+        <Button handle={updateAdvice} />
       </CardButtonWrapper>
     </CardContainer>
   );
