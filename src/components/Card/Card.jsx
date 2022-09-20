@@ -4,25 +4,48 @@ import axios from 'axios';
 import { Button, Line } from '../';
 
 const CardContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 30px 46px 30px;
 
-  background: white;
-  border: 1px solid green;
+  background: var(--color-darkGrayishBlue);
+  border-radius: 10px;
+
+  @media (max-width: 540px) {
+    padding: 30px 20px 46px 20px;
+  }
 `;
 
-const CardTitle = styled.h1``;
+const CardTitle = styled.h1`
+  margin-bottom: 20px;
+  color: var(--color-neonGreen);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+`;
 
-const CardBody = styled.p``;
+const CardBody = styled.p`
+  max-width: 444px;
+  margin-bottom: 26px;
+  color: var(--color-lightCyan);
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+
+  @media (max-width: 540px) {
+    max-width: 295px;
+  }
+`;
 
 const CardButtonWrapper = styled.div`
+  position: absolute;
+  bottom: 0px;
   transform: translateY(50%);
-`;
 
-// svg width:
-// d - 444
-// m - 295
+`;
 
 const Card = () => {
   const [{ id, advice }, setAdvice] = useState({});

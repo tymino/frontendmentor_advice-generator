@@ -4,11 +4,13 @@ const AttrContainer = styled.div`
   position: absolute;
   top: 2px;
   left: 6px;
+  color: var(--color-lightCyan);
   font-size: 11px;
   text-align: center;
 `;
+
 const AttrLink = styled.a`
-  color: hsl(228, 45%, 44%);
+  color: var(--color-neonGreen);
 `;
 
 const Attribution = () => {
