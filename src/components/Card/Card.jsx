@@ -65,8 +65,8 @@ const Card = () => {
 
   return (
     <CardContainer>
-      <CardTitle>{`advice #${id}`}</CardTitle>
-      <CardBody>{advice}</CardBody>
+      <CardTitle data-testid="card-title">{`advice #${id}`}</CardTitle>
+      <CardBody data-testid="card-body">{advice}</CardBody>
       <Line minWidth={480} />
       <CardButtonWrapper>
         <Button handle={updateAdvice} />
