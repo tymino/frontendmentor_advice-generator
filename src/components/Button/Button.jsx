@@ -33,7 +33,7 @@ const Button = ({ handle }) => {
     </svg>
   );
   return (
-    <ButtonStyled title="My button" type="button" onClick={handle}>
+    <ButtonStyled data-testid='card-button' title="My button" type="button" onClick={handle}>
       {current}
     </ButtonStyled>
   );
