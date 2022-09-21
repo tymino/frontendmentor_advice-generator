@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const Line = ({ minWidth }) => {
   return (
     <picture>
@@ -10,4 +12,4 @@ const Line = ({ minWidth }) => {
   );
 };
 
-export default Line;
+export default memo(Line);

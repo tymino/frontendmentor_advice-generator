@@ -44,7 +44,6 @@ const CardButtonWrapper = styled.div`
   position: absolute;
   bottom: 0px;
   transform: translateY(50%);
-
 `;
 
 const Card = () => {

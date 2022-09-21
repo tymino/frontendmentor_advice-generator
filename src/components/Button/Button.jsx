@@ -19,7 +19,10 @@ const ButtonStyled = styled.button`
     box-shadow: 0px 0px 25px 0px var(--color-neonGreen);
   }
   &:active {
-    box-shadow: 0px 0px 25px 16px var(--color-neonGreen);;
+    box-shadow: 0px 0px 25px 16px var(--color-neonGreen);
+  }
+  &:focus-visible {
+    outline-color: var(--color-lightCyan);
   }
 `;
 
@@ -33,7 +36,12 @@ const Button = ({ handle }) => {
     </svg>
   );
   return (
-    <ButtonStyled data-testid='card-button' title="My button" type="button" onClick={handle}>
+    <ButtonStyled
+      data-testid="card-button"
+      title="My button"
+      type="button"
+      onClick={handle}
+    >
       {current}
     </ButtonStyled>
   );
