@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github.com](https://github.com/tymino/frontendmentor_advice-generator-app-main)
-- Live Site URL: [surge.sh](https://tymino-advice-generator-app-main.surge.sh/)
+- Solution URL: [github.com](https://github.com/tymino/frontendmentor_advice-generator)
+- Live Site URL: [surge.sh](https://tymino-advice-generator.surge.sh/)
 
 ## My process
 
