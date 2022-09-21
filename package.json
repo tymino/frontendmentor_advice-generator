@@ -1,5 +1,5 @@
 {
-  "name": "frontendmentor_advice-generator-app-main",
+  "name": "frontendmentor_advice-generator",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -17,8 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll --testMatch **/src/**/*.test.js",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll --testMatch **/src/**/*.test.js"
   },
   "eslintConfig": {
     "extends": [
